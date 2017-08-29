@@ -39,13 +39,11 @@ void printboard(char myboard[][max_side])
 
 		for(int i=0;i<SIDE;i++)
 		{
-			if(i<10)
-			printf("\t\t\t%d   ",i);
-			else
-				printf("\t\t       %d     ",i);
-
-			for(int j=0;j<SIDE;j++)
+			printf("\t\t\t    ");
+			for(int j=0;j<SIDE;j++){
 				printf("%c ",myboard[i][j]);
+			}
+			printf(" %d",i);
 			printf("\n");
 		}
 		return;
