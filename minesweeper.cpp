@@ -8,6 +8,11 @@ using namespace std;
 int SIDE;
 int MINES;
 
+void clear()
+	{
+		printf("\33[2J\33[1;1H");
+	}
+
 bool isvalid(int row,int col)
 	{
 		return (row>=0)&&(row<SIDE)&&(col>=0)&&(col<SIDE);
@@ -23,17 +28,28 @@ bool ismine(int row,int col,char board[][max_side])
 
 void make_move(int *x,int *y)
 	{
-		printf("Enter your move, (row, column) -> ");
+		printf("\nEnter your move, (row, column) -> ");
 		scanf("%d %d", x, y);
 		return;
 	}
 
 void printboard(char myboard[][max_side])
 	{
-		  printf("\n\n\t\t\t    ");
+		clear();
+		printf("\n\n\t\t\t    ");
 
 		for(int i=0;i<SIDE;i++)
-			printf("%d ",i);
+		{
+			if (i>9)
+				printf("%d ",i/10);
+			else
+				printf("  ");
+		}
+		
+		printf("\n\t\t\t    ");
+
+		for(int i=0;i<SIDE;i++)
+			printf("%d ",i%10);
 
 		printf("\n\n");
 
@@ -43,7 +59,7 @@ void printboard(char myboard[][max_side])
 			for(int j=0;j<SIDE;j++){
 				printf("%c ",myboard[i][j]);
 			}
-			printf(" %d",i);
+			printf(" %2d",i);
 			printf("\n");
 		}
 		return;
@@ -300,7 +316,7 @@ void play()
 
 void choosedifficulty()
 	{
-		system("clear");
+		clear();
 		cout<<"\n\t\t\t\t\t\t\t\tMINESWEEPER";
 		cout<<"\n\n\t\t\t\t\t\tCHOOSE DIFFICULTY LEVEL : ";
 		cout<<"\n\n\t\t\t\t\t\t0.BEGINNER\n\t\t\t\t\t\t1.INTERMMEDIATE\n\t\t\t\t\t\t2.ADVANCED";
