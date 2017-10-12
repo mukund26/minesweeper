@@ -25,3 +25,5 @@ g++ minesweeper.cpp -o minesweeper
 ### Play the game!
 
 ![Game](screenshots/game.png)
+
+![Minesweeper running](screenshots/minesweeper-running.gif)
