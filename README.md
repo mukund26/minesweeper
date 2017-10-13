@@ -1,4 +1,4 @@
-# minesweeper
+# Minesweeper
 
 Minesweeper in c++
 LANGUAGE USED: C++
