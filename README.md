@@ -1,6 +1,7 @@
 # Minesweeper
 
-Minesweeper in c++
+Minesweeper
+
 LANGUAGE USED: C++
 
 
