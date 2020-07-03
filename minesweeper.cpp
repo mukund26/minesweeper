@@ -28,9 +28,16 @@ bool ismine(int row,int col,char board[][max_side])
 
 void make_move(int *x,int *y)
 	{
-		printf("\nEnter your move, (row, column) -> ");
-		scanf("%d %d", x, y);
-		return;
+		while(true)
+		{
+			printf("\nEnter your move: [row] [column] -> ");
+			scanf("%d %d", x, y);
+            // Check values to make sure they're not larger than the board size.
+			if ((*x < SIDE) && (*y < SIDE))
+            {
+				return;
+            }
+		}
 	}
 
 void printboard(char myboard[][max_side])
