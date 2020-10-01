@@ -1,4 +1,4 @@
-# Minesweeper
+# Path Shower
 
 Minesweeper in c++
 LANGUAGE USED: C++
